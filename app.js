@@ -59,6 +59,6 @@ app.use("/", indexRoutes);
 app.use("/campgrounds", campgroundRoutes);
 app.use("/campgrounds/:id/comments", commentRoutes);
 
-app.listen(5000, () => {
-	console.log('server listening on 3000');
+app.listen(process.env.PORT, process.env.IP, function(){
+    console.log("The AirCamp Server Has Started");
 });
