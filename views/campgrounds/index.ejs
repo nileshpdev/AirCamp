@@ -7,13 +7,12 @@
                 <a class="btn btn-primary btn-large" href="/campgrounds/new">Add New Campground</a>
              </p>
 			 <p>
-				 <form class="form-inline my-2 my-lg-0" action="/campgrounds" METHOD="GET" class="form-inline">
-			  <div class="form-group">
-				  <input class="form-control mr-sm-2" type="text" name="search" placeholder="Search">
-     			 <button class="btn btn-outline-light my-2 my-sm-0" type="submit" value="Search"><i class="fas fa-search"></i></button>
+				<form class="form-inline my-2 my-lg-0" action="/campgrounds" METHOD="GET" class="form-inline">
+			  		<div class="form-group">
+				    <input class="form-control mr-sm-2" type="text" name="search" placeholder="Search">
+     			    <button class="btn btn-outline-dark my-2 my-sm-0" type="submit" value="Search"><i class="fas fa-search"></i></button>
 			  </div>
     	</form>
-			 </form>
 			 </p>
          </div>
      </header>
@@ -37,7 +36,12 @@
                 <div class="card">
                   <img class="card-img-top" src="<%= campground.image %>" alt="<%= campground.name %>">
                   <div class="card-body">
-                    <h5 class="card-title"><%= campground.name %></h5>
+					  <p class="float-left">
+						  <h5 class="card-title"><%= campground.name %></h5>
+					  </p>
+					  <p>
+         				 £<%= campground.price %> per Night
+        			  </p>
                     <a href="/campgrounds/<%= campground._id %>" class="btn btn-primary">More Info</a>
                   </div>
                 </div>
